@@ -2,6 +2,12 @@
 
 A Bitcoin Cash / Nostr identity binding and independent verifier for the Paytaca identity bounty.
 
+## Bounty readiness
+
+**Status: working prototype; live demonstration and binding publication are outstanding.** The code supports separate BCH and Nostr proofs, decentralized relay discovery, independent verification, revocation evidence, and challenge-response. No participant wallet has signed a binding, no binding has been published to a relay, and no independent client has discovered a live binding. The public source is at [github.com/ansonj-dev/keyweave](https://github.com/ansonj-dev/keyweave); no hosted demo is available yet.
+
+The [Decentralized Identity bounty](https://bchblaze.com/bounties/decentralized-identity/) asks for a self-sovereign BCH/Nostr link that can be discovered and verified without a central identity provider. To demonstrate that end to end, the identity owner must sign with separate keys, choose whether to publish the public association, and verify discovery and authentication from an independent client. See the [criterion audit](../AUDIT-00-01-04.md) before publishing. Relay publication exposes the BCH address and Nostr key together.
+
 ## Run
 
 Requires Node 24. Install with `npm ci`, run `npm run dev`, then open http://localhost:4104. `npm run build` produces the browser bundle. The local Express service runs the independent verifier and example challenge service; relay discovery does not depend on a proprietary identity database.
